@@ -131,10 +131,12 @@ export async function generateReport(api, days = 7) {
   let totalServerTracks = 0;
   let totalServerDuration = 0;
 
-  // Sort users alphabetically
-  const sortedUsers = [...userStats.entries()].sort((a, b) =>
-    a[0].localeCompare(b[0])
-  );
+  // Sort users by total duration (descending), then alphabetically as a fallback
+  const sortedUsers = [...userStats.entries()].sort((a, b) => {
+    const diff = b[1].totalDuration - a[1].totalDuration;
+    if (diff !== 0) return diff;
+    return a[0].localeCompare(b[0]);
+  });
 
   for (const [userName, stats] of sortedUsers) {
     totalServerMovies += stats.movieCount;
