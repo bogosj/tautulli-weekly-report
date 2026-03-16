@@ -1,0 +1,17 @@
+{
+  "name": "tautulli-weekly-report",
+  "version": "1.0.0",
+  "description": "Generate and send weekly Plex viewing reports via Tautulli",
+  "type": "module",
+  "bin": {
+    "tautulli-weekly-report": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": ["tautulli", "plex", "report"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
