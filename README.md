@@ -64,7 +64,7 @@ tautulli-weekly-report config
 ### Build locally
 
 ```bash
-docker build -t tautulli-weekly-report .
+docker build -t ghcr.io/bogosj/tautulli-weekly-report .
 ```
 
 ### Run with a config file
@@ -74,11 +74,11 @@ The container expects configuration at `/config`. Mount your local config direct
 ```bash
 # Setup (interactive — writes config.json into mounted dir)
 docker run -it -v ~/.tautulli-weekly-report:/config \
-  tautulli-weekly-report setup
+  ghcr.io/bogosj/tautulli-weekly-report setup
 
 # Generate and send report
 docker run -v ~/.tautulli-weekly-report:/config \
-  tautulli-weekly-report report
+  ghcr.io/bogosj/tautulli-weekly-report report
 ```
 
 ### Run with environment variables
@@ -90,7 +90,7 @@ docker run \
   -e TAUTULLI_API_KEY=your_api_key \
   -e TAUTULLI_BASE_URL=http://192.168.1.100:8181 \
   -e TAUTULLI_NOTIFIER_ID=1 \
-  tautulli-weekly-report report
+  ghcr.io/bogosj/tautulli-weekly-report report
 ```
 
 Env vars take precedence over values in the config file.
