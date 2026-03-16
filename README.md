@@ -87,6 +87,7 @@ You can skip the config file entirely and pass everything via env vars:
 
 ```bash
 docker run \
+  --rm \
   --network=host \
   -e TAUTULLI_API_KEY=your_api_key \
   -e TAUTULLI_BASE_URL=http://192.168.1.100:8181 \
