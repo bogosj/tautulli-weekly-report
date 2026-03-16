@@ -1,5 +1,5 @@
 /**
- * Tautulli API client using native fetch (Node 20+).
+ * Tautulli API client using native fetch (Node 24+).
  */
 export class TautulliAPI {
   /**

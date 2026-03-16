@@ -4,7 +4,7 @@ Generate and send weekly Plex viewing reports via Tautulli's notification agents
 
 ## Prerequisites
 
-- **Node.js 20+**
+- **Node.js 24+**
 - A running [Tautulli](https://tautulli.com/) instance with at least one notification agent configured
 - Your Tautulli API key (Settings → Web Interface → API Key)
 
